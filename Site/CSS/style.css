@@ -1,6 +1,7 @@
 *{
     margin: 0px;
 }
+
 /*Formatação de Tags*/
 body{
     background-color: #031112;
@@ -16,14 +17,16 @@ div{
 }
 
 h1{
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    color: white;
+    color:rgb(255, 0, 0);
     font-size: x-large;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 1s;
     opacity: 0;
+    text-shadow: 2px 2px black;
 }
 /*Formatação de Elementos*/
 #mainCard{
