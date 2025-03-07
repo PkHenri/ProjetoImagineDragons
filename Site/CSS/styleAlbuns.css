@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: #031112;
+    overflow: hidden;
+}
+
+#imgAlbum{
+    width: 200px;
+    height: 200px;
+    border: double 4px #A64743;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.btnPlataforma{
+    border: none;
+    background: none;
+    width: 64px;
+    height: 64px;
+    margin-top: 25px;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
