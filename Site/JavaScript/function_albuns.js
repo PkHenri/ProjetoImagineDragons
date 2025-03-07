@@ -3,11 +3,12 @@ document.addEventListener('DOMContentLoaded', function (){
         const btnSpotify = document.getElementById('btnSpotify');
         const btnDeezer = document.getElementById('btnDeezer');
         const btnYTM = document.getElementById('btnYTM');
+        const btnVoltar = document.getElementById('btnVoltar');
     //listener
         btnSpotify.addEventListener('click', mandarSpotify);
         btnDeezer.addEventListener('click', mandarDeezer);
         btnYTM.addEventListener('click', mandarYTM);
-    
+        btnVoltar.addEventListener('click', voltarMenu)
         console.log(btnSpotify, btnDeezer, btnYTM);
     //função
         function mandarSpotify (){
@@ -24,5 +25,9 @@ document.addEventListener('DOMContentLoaded', function (){
             console.log('YouTube Music clicado');
             window.open('https://music.youtube.com/playlist?list=OLAK5uy_lfYWpSWk2YbKYQNQEliW8tfYv4wU7IfMI', '_blank');
         }
-        
+
+        function voltarMenu (){
+            window.location.href = 'index.html';
+        }
+
     });
