@@ -3,12 +3,23 @@ document.addEventListener('DOMContentLoaded', function (){
         const btnSpotify = document.getElementById('btnSpotify');
         const btnDeezer = document.getElementById('btnDeezer');
         const btnYTM = document.getElementById('btnYTM');
+
         const btnVoltar = document.getElementById('btnVoltar');
+        const btnAnterior = document.getElementById('btnAnterior');
+        const btnProxiomo = document.getElementById('btnProximo');
+
+        let listaAlbum = ['Imagens/REFLECTIONS.png', 'Imagens/LOOM.png'];
+
+        let indexAtual = 0;
     //listener
         btnSpotify.addEventListener('click', mandarSpotify);
         btnDeezer.addEventListener('click', mandarDeezer);
         btnYTM.addEventListener('click', mandarYTM);
-        btnVoltar.addEventListener('click', voltarMenu)
+
+        btnVoltar.addEventListener('click', voltarMenu);
+        btnAnterior.addEventListener('click', anterior);
+        btnProxiomo.addEventListener('click', proximo)
+
         console.log(btnSpotify, btnDeezer, btnYTM);
     //função
         function mandarSpotify (){
@@ -30,4 +41,17 @@ document.addEventListener('DOMContentLoaded', function (){
             window.location.href = 'index.html';
         }
 
+        function atualizarImagem (){
+            document.getElementById('img_Album').src = listaAlbum[indexAtual];
+        }
+
+        function proximo (){
+            indexAtual = (indexAtual + 1) % listaAlbum.lenght;
+            atualizarImagem();
+        }
+
+        function anterior (){
+            indexAtual = (indexAtual - 1 + imagens.lenght) % listaAlbum.lenght;
+            atualizarImagem();
+        }
     });
